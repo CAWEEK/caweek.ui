@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard-Bold'),
+    url('default/Pretendard-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pretendard-Regular'),
+    url('default/Pretendard-Regular.ttf') format('truetype');
+}
