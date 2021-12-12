@@ -1,6 +1,6 @@
 {
   "name": "weekndo-ui",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "weekndo design system",
   "scripts": {
     "rollup": "rollup -c",
@@ -52,6 +52,7 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
+    "rollup-plugin-postcss": "^4.0.2",
     "styled-components": "^5.3.3"
   }
 }
