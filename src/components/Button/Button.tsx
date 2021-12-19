@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
+import { GlobalStyle } from "../GlobalStyle/GlobalStyle";
 
 export interface ButtonProps {
   label: string;
@@ -7,13 +8,15 @@ export interface ButtonProps {
 
 const StyledButton = styled.button`
   width: 100px;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", sans-serif;
 `;
 
 const Button = (props: ButtonProps) => {
-  return <StyledButton>{props.label}</StyledButton>;
+  return (
+    <>
+      <GlobalStyle />
+      <StyledButton>{props.label}</StyledButton>
+    </>
+  );
 };
 
 export default Button;
