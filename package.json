@@ -1,7 +1,7 @@
 {
-  "name": "cake-ui",
-  "version": "0.0.1",
-  "description": "caweek design system | cake-ui",
+  "name": "caweek-ui",
+  "version": "0.0.2",
+  "description": "caweek design system | caweek-ui",
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
