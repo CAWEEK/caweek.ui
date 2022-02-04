@@ -1,3 +1,5 @@
+import { Theme } from "@emotion/react";
+
 const colors = {
   /* main */
   purple10: "#FFFEF0",
@@ -42,7 +44,7 @@ const colors = {
 };
 
 const fontFamily = {
-  general: `Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo","Noto Sans KR", "Malgun Gothic", sans-serif`,
+  default: `Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo","Noto Sans KR", "Malgun Gothic", sans-serif`,
 };
 
 const fontSizes = {
@@ -95,11 +97,12 @@ const breakPoints = {
   xl: "1920px",
 };
 
-const theme = {
+const theme: Theme = {
   colors,
   fontFamily,
   fontSizes,
   fontWeights,
+  lineHeights,
   breakPoints,
 };
 
