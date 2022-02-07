@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier" 
+    /*
+      마지막에 넣어야 indent 충돌이 일어나지 않습니다. 
+      prettier/react 및 prettier/@typescript-eslint 는 
+      eslint-config-prettier에 8.0.0 버전부터 merge 되었습니다. 
+    */
+  ],
+  "ignorePatterns": [
+    "rollup.config.js",
+    "dist/",
+    "node_modules/",
+    ".storybook/"
+  ],
+  "rules": {
+    "linebreak-style": 0,
+    "import/prefer-default-export": 0,
+    "react/function-component-definition": 0,
+    "prettier/prettier": 0,
+    "import/extensions": 0,
+    "no-use-before-define": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0, // 테스트 또는 개발환경을 구성하는 파일에서는 devDependency 사용을 허용
+    "no-shadow": 0,
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/jsx-props-no-spreading": 0
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
