@@ -37,14 +37,12 @@ const colors = ({ color, bg, hoverColor, hoverBg }: Colors) => {
 	return css(styles);
 };
 
-const baseStyles = () =>
-	css({
-		color: theme.colors.grey90,
-		fontSize: theme.fontSizes.subhead2,
+const BaseElement = styled.div(
+	{
 		fontFamily: theme.fontFamily.default,
 		boxSizing: 'border-box',
-	});
-
-const BaseElement = styled.div(baseStyles, colors);
+	},
+	colors
+);
 
 export default BaseElement;
