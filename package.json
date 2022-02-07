@@ -4,7 +4,7 @@
   "description": "caweek design system | caweek-ui",
   "scripts": {
     "rollup": "rollup -c",
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx,js.jsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx,js.jsx}'",
