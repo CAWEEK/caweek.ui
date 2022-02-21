@@ -9,15 +9,19 @@ export interface ButtonProps {
 
 const BaseButton = withTheme(styled(BaseElement)`
 	white-space: nowrap;
-	border: ${({ theme: { colors } }) => `1px solid ${colors.grey90}`};
+	color: ${({ theme: { colors } }) => colors.white};
+	width: ${({ theme: { sizes } }) => sizes.medium.width};
+	height: ${({ theme: { sizes } }) => sizes.medium.height};
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 20px;
+	border: none;
+	background-color: ${({ theme: { colors } }) => colors.purple30};
 `);
 
 BaseButton.defaultProps = { as: 'button' };
 
 function Button({ label }: ButtonProps) {
-	return <BaseButton color="purple10">{label}</BaseButton>;
+	return <BaseButton>{label}</BaseButton>;
 }
 
 export default Button;

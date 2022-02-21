@@ -2,11 +2,11 @@ import { Theme } from '@emotion/react';
 
 const colors = {
 	/* main */
-	purple10: '#FFFEF0',
-	purple20: '#FFFA8B',
+	purple10: '#F6F2FF',
+	purple20: '#AB84FF',
 	purple30: '#651DFF',
-	purple40: '#F8D418',
-	purple50: '#B79900',
+	purple40: '#202020',
+	purple50: '#000000',
 	darkPurple10: '#DBD2ED',
 
 	/* sub */
@@ -45,6 +45,25 @@ const colors = {
 const fontFamily = {
 	default:
 		'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo","Noto Sans KR", "Malgun Gothic", sans-serif',
+};
+
+const sizes = {
+	large: {
+		width: `280px`,
+		height: `56px`,
+	},
+	medium: {
+		width: '230px',
+		height: '56px',
+	},
+	small: {
+		width: '160px',
+		height: '40px',
+	},
+	tiny: {
+		width: '96px',
+		height: '36px',
+	},
 };
 
 const fontSizes = {
@@ -99,6 +118,7 @@ const breakPoints = {
 
 const theme: Theme = {
 	colors,
+	sizes,
 	fontFamily,
 	fontSizes,
 	fontWeights,

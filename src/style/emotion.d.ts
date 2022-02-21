@@ -29,6 +29,11 @@ declare module '@emotion/react' {
 		| 'shadow100'
 		| 'shadow200'
 		| 'shadow300';
+	export type ThemeSize = 'large' | 'medium' | 'small' | 'tiny';
+	export type IndividualSizeType = {
+		width: string;
+		height: string;
+	};
 	export type ThemeFontFamily = 'default';
 	export type ThemeFont =
 		| 'headline1'
@@ -47,6 +52,9 @@ declare module '@emotion/react' {
 	export interface Theme {
 		colors: {
 			[key in ThemeColors]: string;
+		};
+		sizes: {
+			[key in ThemeSize]: IndividualSizeType;
 		};
 		fontFamily: {
 			[key in ThemeFontFamily]: string;
