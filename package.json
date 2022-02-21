@@ -1,6 +1,6 @@
 {
   "name": "caweek-ui",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "caweek design system | caweek-ui",
   "scripts": {
     "rollup": "rollup -c",
