@@ -6,4 +6,5 @@ const BaseElement = styled.div({
 	fontFamily: theme.fontFamily.default,
 	boxSizing: 'border-box',
 });
+
 export default BaseElement;
