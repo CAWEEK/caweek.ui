@@ -1,7 +1,0 @@
-{
-  "presets": [
-    ["react-app", { "flow": false, "typescript": true }],
-    ["@babel/preset-react", "@emotion/babel-preset-css-prop"]
-  ],
-  "plugins": ["babel-plugin-styled-components"]
-}

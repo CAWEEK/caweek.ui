@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button from './Button';
+import Button from '.';
 
 export default {
 	title: 'caweek-ui/Button',

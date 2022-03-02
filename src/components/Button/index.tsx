@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { withTheme } from '@emotion/react';
-import BaseElement from '@common/BaseElement';
+import { ThemeProvider } from '@emotion/react';
+import theme from '../../style/theme';
+
+import BaseElement from '../../common/BaseElement';
 
 export interface ButtonProps {
 	label: string;
 }
 
-const BaseButton = withTheme(styled(BaseElement)`
+const BaseButton = styled(BaseElement)`
 	white-space: nowrap;
 	color: ${({ theme: { colors } }) => colors.white};
 	width: ${({ theme: { sizes } }) => sizes.medium.width};
@@ -16,12 +18,16 @@ const BaseButton = withTheme(styled(BaseElement)`
 	border-radius: 20px;
 	border: none;
 	background-color: ${({ theme: { colors } }) => colors.purple30};
-`);
+`;
 
 BaseButton.defaultProps = { as: 'button' };
 
 function Button({ label }: ButtonProps) {
-	return <BaseButton>{label}</BaseButton>;
+	return (
+		<ThemeProvider theme={theme}>
+			<BaseButton>{label}</BaseButton>;
+		</ThemeProvider>
+	);
 }
 
 export default Button;
