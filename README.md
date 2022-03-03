@@ -1,4 +1,4 @@
-# Cake-UI
+# Caweek-UI
 
 caweek 디자인 시스템입니다.
 
