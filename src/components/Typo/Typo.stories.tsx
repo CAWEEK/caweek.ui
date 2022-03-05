@@ -60,15 +60,13 @@ export default {
 	},
 } as ComponentMeta<typeof Typo>;
 
-const Template: ComponentStory<typeof Typo> = ({ children, color, font, isClickable }) => {
-	return (
-		<Typo color={color} font={font} isClickable={isClickable}>
-			{children}
-		</Typo>
-	);
-};
+const Template: ComponentStory<typeof Typo> = ({ children, color, font, isClickable }) => (
+	<Typo color={color} font={font} isClickable={isClickable}>
+		{children}
+	</Typo>
+);
 
-const ListTemplate: ComponentStory<any> = () => {
+const ListTemplate = () => {
 	const TypoWrapper = styled.div`
 		display: flex;
 		flex-direction: column;
