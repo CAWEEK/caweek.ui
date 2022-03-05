@@ -34,7 +34,7 @@ const Template: ComponentStory<typeof Button> = ({ children, size, type, isDisab
 	);
 };
 
-const ListTemplate: ComponentStory<any> = () => {
+const ListTemplate = () => {
 	const clickAction = action('clicked');
 
 	const ButtonWrapper = styled.div`
