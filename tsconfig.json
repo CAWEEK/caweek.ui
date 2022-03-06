@@ -10,7 +10,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "declaration": true,
     "declarationDir": "dist/types",
     "baseUrl": "./src"
