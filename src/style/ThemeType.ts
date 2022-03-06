@@ -25,7 +25,8 @@ export type Colors =
 	| 'shadow50'
 	| 'shadow100'
 	| 'shadow200'
-	| 'shadow300';
+	| 'shadow300'
+	| 'transparent';
 export type Sizes = 'large' | 'medium' | 'small' | 'tiny';
 export type Size = {
 	width: string;

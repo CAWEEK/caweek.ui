@@ -40,6 +40,9 @@ const colors = {
 		'0px 5.86471px 13.1956px -4.39853px rgba(80, 103, 136, 0.12), 0px 8.79706px 30.7897px -2.93235px rgba(80, 103, 136, 0.12)',
 	shadow300:
 		'0px 5.86471px 20.5265px -4.39853px rgba(80, 103, 136, 0.12), 0px 13.1956px 64.5118px -2.93235px rgba(80, 103, 136, 0.14)',
+
+	/* etc */
+	transparent: 'transparent',
 };
 
 const fontFamily = {
