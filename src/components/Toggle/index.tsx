@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
 import theme from '../../style/theme';
 
 export type ToggleProps = {
-	handleCheck: (isChecked: boolean) => void;
-	isChecked: boolean;
-	setIsChecked: React.Dispatch<React.SetStateAction<boolean>>;
+	handleCheck: (isChecked: boolean | undefined) => void;
 };
 
 const BaseToggle = styled.input`
@@ -57,13 +55,15 @@ const BaseToggle = styled.input`
 
 BaseToggle.defaultProps = { type: 'checkbox' };
 
-function Toggle({ isChecked, setIsChecked, handleCheck }: ToggleProps) {
+function Toggle({ handleCheck }: ToggleProps) {
+	const toggleRef = useRef<HTMLInputElement>(null);
+
 	return (
 		<ThemeProvider theme={theme}>
 			<BaseToggle
+				ref={toggleRef}
 				onChange={() => {
-					setIsChecked(!isChecked);
-					handleCheck(isChecked);
+					handleCheck(toggleRef.current?.checked);
 				}}
 			/>
 		</ThemeProvider>
