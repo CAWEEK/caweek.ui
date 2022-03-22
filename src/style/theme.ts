@@ -32,6 +32,14 @@ const colors = {
 	blueGrey20: '#F2F4F8',
 	purpleGrey10: '#F7F6F9',
 
+	/* label */
+	backgroundPink: '#FFE6F5',
+	backgroundYellow: '#FFF0BC',
+	backgroundBlue: '#E1F1FF',
+	textPink: '#FF68C3',
+	textYellow: '#EE8F00',
+	textBlue: '#3F80FF',
+
 	/* shadow */
 	shadow50:
 		'0px 4.39853px 5.86471px -4.39853px rgba(24, 39, 75, 0.12), 0px 5.86471px 11.7294px -4.39853px rgba(24, 39, 75, 0.08)',
