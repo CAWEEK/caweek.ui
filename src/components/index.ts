@@ -6,3 +6,5 @@ export { default as Icon } from './Icon';
 export { default as Label } from './Label';
 export { default as Toggle } from './Toggle';
 export { default as TextField } from './TextField';
+export { default as Radio } from './Radio';
+export { default as CheckBox } from './CheckBox';
