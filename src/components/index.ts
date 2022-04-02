@@ -5,3 +5,4 @@ export { default as DropDown } from './DropDown';
 export { default as Icon } from './Icon';
 export { default as Label } from './Label';
 export { default as Toggle } from './Toggle';
+export { default as TextField } from './TextField';
