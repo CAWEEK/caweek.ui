@@ -1,0 +1,33 @@
+name: CAWEEK-UI npm publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Build and Publish to NPM
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: https://registry.npmjs.org/
+          
+      - name: Install node packages
+        run: npm ci
+
+      - name: Bundling
+        run: npm run build
+
+      - name: Type Bundling
+        run: npm run build:types
+
+      - name: Publish to NPM
+        run: npm publish --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+
