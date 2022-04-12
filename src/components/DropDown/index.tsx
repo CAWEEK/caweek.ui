@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
-import Icon from 'components/Icon';
-import Typo from 'components/Typo';
-import { Colors } from 'style';
+import { Colors } from '../../style';
+import Typo from '../Typo';
+import Icon from '../Icon';
 import theme from '../../style/theme';
 
 type Option = {

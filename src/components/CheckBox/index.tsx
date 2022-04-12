@@ -3,8 +3,8 @@ import React from 'react';
 import { ThemeProvider, css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { theme } from 'style';
-import Typo from 'components/Typo';
+import { theme } from '../../style';
+import Typo from '../Typo';
 
 type BaseCheckBoxProps = {
 	isChecked?: boolean;

@@ -22,6 +22,9 @@ jobs:
       - name: Bundling
         run: npm run build
 
+      - name: Type Bundling
+        run: npm run build:types
+
       - name: Publish to NPM
         run: npm publish --access=public
 

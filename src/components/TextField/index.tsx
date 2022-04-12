@@ -3,7 +3,7 @@ import React, { ChangeEventHandler } from 'react';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
-import { theme } from 'style';
+import { theme } from '../../style';
 
 type TextFieldProps = {
 	value?: string;

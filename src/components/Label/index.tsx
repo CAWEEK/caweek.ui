@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { css, ThemeProvider } from '@emotion/react';
 
-import BaseElement from 'common/BaseElement';
-import { Colors } from 'style';
-import { Typo } from 'components';
+import { Colors } from '../../style';
+import BaseElement from '../../common/BaseElement';
+import Typo from '../Typo';
 import theme from '../../style/theme';
 
 export type BaseLabelProps = {

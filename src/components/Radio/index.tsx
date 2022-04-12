@@ -3,8 +3,8 @@ import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { Typo } from 'components';
-import { theme } from 'style';
+import Typo from '../Typo';
+import { theme } from '../../style';
 
 type OptionListProps = {
 	margin?: number;
