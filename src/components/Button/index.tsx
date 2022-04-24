@@ -29,14 +29,21 @@ const BaseButton = styled(BaseElement)<BaseButtonProps>`
 		size === 'large' &&
 		`
 		font-weight: bold;
+		border-radius: 24px;
 
+	`}
+
+	${({ size }) =>
+		size === 'small' &&
+		`
+		border-radius: 16px;
 	`}
 
 	${({ size }) =>
 		size === 'tiny' &&
 		`
 		font-size: 12px;
-
+		border-radius: 12px;
 	`}
 
 	${({ theme: { colors }, type }) =>
