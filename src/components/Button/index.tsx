@@ -18,7 +18,7 @@ export type ButtonProps = {
 
 const BaseButton = styled.button<BaseButtonProps>`
 	font-family: ${({ theme: { fontFamily } }) => fontFamily.default};
-	box-sizing: 'border-box';
+	box-sizing: border-box;
 	white-space: nowrap;
 	width: ${({ theme: { sizes }, size }) => sizes[size as Sizes].width};
 	height: ${({ theme: { sizes }, size }) => sizes[size as Sizes].height};

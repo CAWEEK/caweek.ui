@@ -19,7 +19,11 @@ const BaseTypo = styled.p<BaseTypoProps>`
 	font-style: normal;
 	letter-spacing: -0.6px;
 	font-family: ${({ theme: { fontFamily } }) => fontFamily.default};
-	box-sizing: 'border-box';
+	box-sizing: border-box;
+	white-space: nowrap;
+	z-index: inherit;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
 
 	${({ theme: { fontSizes, lineHeights, fontWeights, colors }, font, color }) => `
     font-weight: ${fontWeights[font as Fonts]};
