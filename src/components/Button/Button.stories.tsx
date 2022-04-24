@@ -15,7 +15,7 @@ export default {
 			options: ['tiny', 'small', 'medium', 'large'],
 			control: { type: 'radio' },
 		},
-		type: {
+		kind: {
 			options: ['prime', 'sub', 'cancel'],
 			control: { type: 'radio' },
 		},
@@ -25,10 +25,10 @@ export default {
 	},
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = ({ children, size, type, isDisabled }) => {
+const Template: ComponentStory<typeof Button> = ({ children, size, kind, isDisabled }) => {
 	const clickAction = action('clicked');
 	return (
-		<Button size={size} type={type} isDisabled={isDisabled} onClick={clickAction}>
+		<Button size={size} kind={kind} isDisabled={isDisabled} onClick={clickAction}>
 			{children}
 		</Button>
 	);
@@ -72,46 +72,46 @@ const ListTemplate = () => {
 		<ButtonWrapper>
 			<Title className="description">PRIME</Title>
 			<InnerWrapper>
-				<Button size="large" type="prime" onClick={clickAction}>
+				<Button size="large" kind="prime" onClick={clickAction}>
 					PRIME
 				</Button>
-				<Button size="medium" type="prime" onClick={clickAction}>
+				<Button size="medium" kind="prime" onClick={clickAction}>
 					PRIME
 				</Button>
-				<Button size="small" type="prime" onClick={clickAction}>
+				<Button size="small" kind="prime" onClick={clickAction}>
 					PRIME
 				</Button>
-				<Button size="tiny" type="prime" onClick={clickAction}>
+				<Button size="tiny" kind="prime" onClick={clickAction}>
 					PRIME
 				</Button>
 			</InnerWrapper>
 			<Title className="description">SUB</Title>
 			<InnerWrapper>
-				<Button size="large" type="sub" onClick={clickAction}>
+				<Button size="large" kind="sub" onClick={clickAction}>
 					SUB
 				</Button>
-				<Button size="medium" type="sub" onClick={clickAction}>
+				<Button size="medium" kind="sub" onClick={clickAction}>
 					SUB
 				</Button>
-				<Button size="small" type="sub" onClick={clickAction}>
+				<Button size="small" kind="sub" onClick={clickAction}>
 					SUB
 				</Button>
-				<Button size="tiny" type="sub" onClick={clickAction}>
+				<Button size="tiny" kind="sub" onClick={clickAction}>
 					SUB
 				</Button>
 			</InnerWrapper>
 			<Title className="description">CANCEL</Title>
 			<InnerWrapper>
-				<Button size="large" type="cancel" onClick={clickAction}>
+				<Button size="large" kind="cancel" onClick={clickAction}>
 					CANCEL
 				</Button>
-				<Button size="medium" type="cancel" onClick={clickAction}>
+				<Button size="medium" kind="cancel" onClick={clickAction}>
 					CANCEL
 				</Button>
-				<Button size="small" type="cancel" onClick={clickAction}>
+				<Button size="small" kind="cancel" onClick={clickAction}>
 					CANCEL
 				</Button>
-				<Button size="tiny" type="cancel" onClick={clickAction}>
+				<Button size="tiny" kind="cancel" onClick={clickAction}>
 					CANCEL
 				</Button>
 			</InnerWrapper>
@@ -138,7 +138,7 @@ export const button = Template.bind({});
 button.args = {
 	children: 'BUTTON',
 	size: 'medium',
-	type: 'prime',
+	kind: 'prime',
 	isDisabled: false,
 };
 

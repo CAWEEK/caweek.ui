@@ -4,10 +4,9 @@ import { ThemeProvider } from '@emotion/react';
 
 import theme from '../../style/theme';
 import { Sizes } from '../../style/ThemeType';
-import BaseElement from '../../common/BaseElement';
 
 export type BaseButtonProps = {
-	type?: 'prime' | 'sub' | 'cancel';
+	kind?: 'prime' | 'sub' | 'cancel';
 	size?: Sizes;
 	isDisabled?: boolean;
 };
@@ -17,7 +16,9 @@ export type ButtonProps = {
 	onClick?: MouseEventHandler<HTMLElement>;
 } & BaseButtonProps;
 
-const BaseButton = styled(BaseElement)<BaseButtonProps>`
+const BaseButton = styled.button<BaseButtonProps>`
+	font-family: ${({ theme: { fontFamily } }) => fontFamily.default};
+	box-sizing: 'border-box';
 	white-space: nowrap;
 	width: ${({ theme: { sizes }, size }) => sizes[size as Sizes].width};
 	height: ${({ theme: { sizes }, size }) => sizes[size as Sizes].height};
@@ -46,24 +47,24 @@ const BaseButton = styled(BaseElement)<BaseButtonProps>`
 		border-radius: 12px;
 	`}
 
-	${({ theme: { colors }, type }) =>
-		type === 'prime' &&
+	${({ theme: { colors }, kind }) =>
+		kind === 'prime' &&
 		`
 		color: ${colors.white};
 		background-color: ${colors.purple30};
 
 	`}
 
-	${({ theme: { colors }, type }) =>
-		type === 'sub' &&
+	${({ theme: { colors }, kind }) =>
+		kind === 'sub' &&
 		`
 		color: ${colors.purple30};
 		background-color: ${colors.purpleGrey10};
 
 	`}
 
-	${({ theme: { colors }, type }) =>
-		type === 'cancel' &&
+	${({ theme: { colors }, kind }) =>
+		kind === 'cancel' &&
 		`
 		color: ${colors.grey50};
 		background-color: ${colors.blueGrey20};
@@ -80,18 +81,16 @@ const BaseButton = styled(BaseElement)<BaseButtonProps>`
 	`}
 `;
 
-BaseButton.defaultProps = { as: 'button' };
-
-function Button({ children, size, type, isDisabled, onClick }: ButtonProps) {
+function Button({ children, size, kind, isDisabled, onClick }: ButtonProps) {
 	return (
 		<ThemeProvider theme={theme}>
-			<BaseButton size={size} type={type} isDisabled={isDisabled} onClick={isDisabled ? undefined : onClick}>
+			<BaseButton size={size} kind={kind} isDisabled={isDisabled} onClick={isDisabled ? undefined : onClick}>
 				{children}
 			</BaseButton>
 		</ThemeProvider>
 	);
 }
 
-Button.defaultProps = { isDisabled: false, size: 'medium', type: 'prime', onClick: undefined };
+Button.defaultProps = { isDisabled: false, size: 'medium', kind: 'prime', onClick: undefined };
 
 export default Button;

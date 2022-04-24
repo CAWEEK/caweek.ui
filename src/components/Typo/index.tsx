@@ -4,7 +4,6 @@ import { ThemeProvider } from '@emotion/react';
 
 import theme from '../../style/theme';
 import { Colors, Fonts } from '../../style/ThemeType';
-import BaseElement from '../../common/BaseElement';
 
 export type BaseTypoProps = {
 	color?: Colors;
@@ -16,9 +15,11 @@ export type TypoProps = {
 	children: ReactNode;
 } & BaseTypoProps;
 
-const BaseTypo = styled(BaseElement)<BaseTypoProps>`
+const BaseTypo = styled.p<BaseTypoProps>`
 	font-style: normal;
 	letter-spacing: -0.6px;
+	font-family: ${({ theme: { fontFamily } }) => fontFamily.default};
+	box-sizing: 'border-box';
 
 	${({ theme: { fontSizes, lineHeights, fontWeights, colors }, font, color }) => `
     font-weight: ${fontWeights[font as Fonts]};
@@ -26,15 +27,12 @@ const BaseTypo = styled(BaseElement)<BaseTypoProps>`
     line-height: ${lineHeights[font as Fonts]};
     color: ${colors[color as Colors]};
   `}
-
 	${({ isClickable }) =>
 		isClickable &&
 		`
     cursor: pointer;
-  `}
+  `};
 `;
-
-BaseTypo.defaultProps = { as: 'p' };
 
 function Typo({ children, color, font, isClickable }: TypoProps) {
 	return (
