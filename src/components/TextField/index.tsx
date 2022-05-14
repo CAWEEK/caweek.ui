@@ -3,20 +3,21 @@ import React, { ChangeEventHandler } from 'react';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
-import { theme } from '../../style';
+import { Colors, theme } from '../../style';
 
 type TextFieldProps = {
 	value?: string;
 	onChange?: ChangeEventHandler<HTMLInputElement>;
 	placeholder?: string;
 	full?: boolean;
+	bgColor?: Colors;
 };
 
-const BaseTextField = styled.input<{ full?: boolean }>`
+const BaseTextField = styled.input<{ full?: boolean; bgColor?: Colors }>`
 	width: ${({ full }) => (full ? '100%' : '280px')};
 	height: ${({ full }) => (full ? '64px' : '48px')};
 	border-radius: 12px;
-	background-color: ${({ theme: { colors } }) => colors.blueGrey10};
+	background-color: ${({ theme: { colors }, bgColor }) => (bgColor ? colors[bgColor] : colors.blueGrey10)};
 	box-sizing: border-box;
 	border: none;
 	padding: 0 16px;
@@ -38,10 +39,10 @@ const BaseTextField = styled.input<{ full?: boolean }>`
 	}
 `;
 
-function TextField({ value, onChange, placeholder, full }: TextFieldProps) {
+function TextField({ value, onChange, placeholder, full, bgColor }: TextFieldProps) {
 	return (
 		<ThemeProvider theme={theme}>
-			<BaseTextField value={value} onChange={onChange} placeholder={placeholder} full={full} />
+			<BaseTextField value={value} onChange={onChange} placeholder={placeholder} full={full} bgColor={bgColor} />
 		</ThemeProvider>
 	);
 }
@@ -51,6 +52,7 @@ TextField.defaultProps = {
 	onChange: undefined,
 	placeholder: undefined,
 	full: undefined,
+	bgColor: undefined,
 };
 
 export default TextField;
